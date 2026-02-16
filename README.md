@@ -18,7 +18,7 @@ WIZZ Mania est une réimplémentation moderne du système de chat MSN Messenger.
 
 ## 📦 Installation
 1. Assurez-vous d'avoir **Qt 6** installé (via Homebrew sur macOS : `brew install qt6`)
-2. Clonez le projet : `git clone https://github.com/aminata-sane/wizzMania`
+2. Clonez le projet : `git clone https://github.com/Mehdichoucha/wizz_mania.git`
 3. Accédez au dossier du projet : `cd wizzMania`
 
 ## 🔨 Compilation et Exécution
@@ -28,11 +28,15 @@ WIZZ Mania est une réimplémentation moderne du système de chat MSN Messenger.
 #### macOS
 - **Qt 6** : `brew install qt6`
 - **CMake** : `brew install cmake`
+- **Xcode Command Line Tools** : `xcode-select --install` (pour le compilateur)
 
 #### Windows  
-- **Qt 6** : Télécharger l'installateur depuis [qt.io](https://www.qt.io/download) ou utiliser MSYS2
-- **CMake** : Inclus dans Qt Creator ou installer séparément
-- **Compilateur** : MinGW (recommandé) ou MSVC
+- **Qt 6** : Télécharger et installer depuis [qt.io/download](https://www.qt.io/download). Assurez-vous d'installer les composants Core, Widgets, Network, Multimedia.
+- **CMake** : Télécharger depuis [cmake.org/download](https://cmake.org/download/) ou utiliser la version incluse dans Qt Creator.
+- **Compilateur** : 
+  - MinGW : Inclus avec Qt, recommandé pour compatibilité.
+  - MSVC : Visual Studio Community (gratuit) pour un environnement professionnel.
+- **Git** : Pour cloner le projet.
 
 ### 🏗️ Compilation
 
@@ -50,12 +54,21 @@ make
 2. Configurer le kit (MinGW ou MSVC)
 3. Compiler en mode Release
 
-#### Windows (en ligne de commande)
+#### Windows (en ligne de commande avec MinGW)
 ```bash
 cd wizzMania
 mkdir build
 cd build
-cmake .. -G "MinGW Makefiles"
+cmake .. -G "MinGW Makefiles" -DCMAKE_PREFIX_PATH="C:\Qt\6.x.x\mingw_64"  # Ajuster le chemin Qt
+cmake --build . --config Release
+```
+
+#### Windows (en ligne de commande avec MSVC)
+```bash
+cd wizzMania
+mkdir build
+cd build
+cmake .. -G "Visual Studio 16 2019" -DCMAKE_PREFIX_PATH="C:\Qt\6.x.x\msvc2019_64"  # Ajuster versions
 cmake --build . --config Release
 ```
 
