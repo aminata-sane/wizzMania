@@ -1,0 +1,7 @@
+build/
+wizzMania/build/
+*.qm
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
