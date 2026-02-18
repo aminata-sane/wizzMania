@@ -5,3 +5,11 @@ CMakeCache.txt
 CMakeFiles/
 cmake_install.cmake
 Makefile
+
+# Root build directory
+build/
+.DS_Store
+
+# Qt Creator settings
+.qtcreator/
+.vscode/
