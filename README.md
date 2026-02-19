@@ -18,7 +18,7 @@ WIZZ Mania est une réimplémentation moderne du système de chat MSN Messenger.
 
 ## 📦 Installation
 1. Assurez-vous d'avoir **Qt 6** installé (via Homebrew sur macOS : `brew install qt6`)
-2. Clonez le projet : `git clone https://github.com/Mehdichoucha/wizz_mania.git`
+2. Clonez le projet : `git clone https://github.com/aminata-sane/wizzMania.git`
 3. Accédez au dossier du projet : `cd wizzMania`
 
 ## 🔨 Compilation et Exécution
