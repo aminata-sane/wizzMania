@@ -95,5 +95,29 @@ wizzMania.exe
 - `client` : Code client uniquement  
 - `common` : Composants partagés
 
+## 🧪 Tests Automatisés
+
+Le projet inclut un système de tests complet pour valider la robustesse du serveur :
+
+```bash
+# Test par défaut : 10 clients pendant 30 secondes
+cd tests && ./run_tests.sh
+
+# Test personnalisé : 5 clients pendant 10 secondes  
+cd tests && ./run_tests.sh 5 10
+
+# Tests manuels
+cd tests/build
+./test_server 9999    # Terminal 1
+./test_clients 5 10    # Terminal 2
+```
+
+**Fonctionnalités testées :**
+- ✅ Connexions simultanées multiples
+- ✅ Broadcast des messages à tous les clients
+- ✅ Gestion des effets Wizz
+- ✅ Reconnexion automatique
+- ✅ Robustesse du serveur sous charge
+
 ## 📖 Licence
 Projet réalisé dans le cadre d'un exercice académique sur les communications réseaux.
